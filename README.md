@@ -47,8 +47,19 @@ I created a simple example helm chart following [this blog](https://opensource.c
 Summerising what we have done till now.
 
 1. We tried out [kind](https://kind.sigs.k8s.io/ "kind"), and created a simple cluster
-2. We verified if [helm3](https://helm.sh/ "helm") is working with this cluster
+2. We verified if [helm3](https://helm.sh/ "helm") is working with this cluster using a [hello-world](https://github.com/kodefoundry/kind-cluster/tree/main/hello-world "hello-world") available in the repository.
 
 [========]
 
 # Deploying a multinode K8s cluster and deploy a sample application, EFK and Nginx Ingress
+
+The plan
+
+	Create a multinode cluster
+	Deploy Nginx Ingress
+	Deploy a REST API backend server
+	Deploy EFK
+	Configure EFK to monitor logs
+
+Multinode cluster was sucessfully created using the [kind.yaml](https://github.com/kodefoundry/kind-cluster/blob/main/kind.yaml "kind.yaml") available in the repository.
+
