@@ -30,7 +30,7 @@ Get cluster details
 Deleting clusters
 `kind delete cluster`
 
-Docker images can be loaded easily to your cluster
+Docker images can be loaded easily to your cluster 
 `kind load docker-image my-custom-image-0 my-custom-image-1 --name my-cluster-name`
 
 Thats a cool feature so your development process will look like
@@ -48,7 +48,6 @@ Summerising what we have done till now.
 
 1. We tried out [kind](https://kind.sigs.k8s.io/ "kind"), and created a simple cluster
 2. We verified if [helm3](https://helm.sh/ "helm") is working with this cluster
-
 
 [========]
 
