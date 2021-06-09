@@ -31,7 +31,6 @@ Deleting clusters
 `kind delete cluster`
 
 Docker images can be loaded easily to your cluster 
-
 `kind load docker-image my-custom-image-0 my-custom-image-1 --name my-cluster-name`
 
 Thats a cool feature so your development process will look like
