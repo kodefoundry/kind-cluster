@@ -1,0 +1,41 @@
+kind: Cluster
+apiVersion: kind.x-k8s.io/v1alpha4
+name: rnd-cluster
+#featureGates:
+#  #any feature gate can be enabled here with "Name": true
+#  #or disabled here with "Name": false
+#  #not all feature gates are tested, however
+#  "CSIMigration": true
+#runtimeConfig:
+#  "api/alpha": "false"
+networking:
+  #ipv6|ipv4|dual
+  ipFamily: ipv4
+  apiServerAddress: "127.0.0.1"
+#  apiServerPort: 6443
+#  podSubnet: "10.244.0.0/16"
+#  serviceSubnet: "10.96.0.0/12"
+#  disableDefaultCNI: true
+#  #iptables|ipvs|none
+#  kubeProxyMode: "ipvs"
+
+# One control plane node and three "workers".
+#
+# While these will not add more real compute capacity and
+# have limited isolation, this can be useful for testing
+# rolling updates etc.
+#
+# The API-server and other control plane components will be
+# on the control-plane node.
+#
+# You probably don't need this unless you are testing Kubernetes itself.
+nodes:
+  - role: control-plane
+  - role: worker
+  - role: worker
+  - role: worker
+#  image: kindest/node:v1.16.4@sha256:b91a2c2317a000f3a783489dfb755064177dbc3a0b2f4147d50f04825d016f55
+#  add a mount from /path/to/my/files on the host to /files on the node
+#  extraMounts:
+#  - hostPath: /path/to/my/files/
+#    containerPath: /files
