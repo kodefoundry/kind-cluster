@@ -63,3 +63,11 @@ The plan
 
 Multinode cluster was sucessfully created using the [kind.yaml](https://github.com/kodefoundry/kind-cluster/blob/main/kind.yaml "kind.yaml") available in the repository.
 
+Nginx ingress was deployed gracefuly using helm 
+
+    helm repo add nginx-stable https://helm.nginx.com/stable
+    helm repo update
+    helm install nginx-release nginx-stable/nginx-ingress
+
+I created a simple [REST API microservice](https://github.com/kodefoundry/api-service "REST API microservice") and created helm chart for same and deployed it into the cluster. Please go through the readme sections in the main project and under deploy for details.
+
