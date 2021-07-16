@@ -62,7 +62,7 @@ The plan
 	Configure EFK to monitor logs
 
 Multinode cluster was sucessfully created using the [kind.yaml](https://github.com/kodefoundry/kind-cluster/blob/main/kind.yaml "kind.yaml") available in the repository. Just run the below command
-`kind create cluster --config kind.yaml`
+    `kind create cluster --config kind.yaml`
 
 Nginx ingress was deployed gracefuly using helm 
 
